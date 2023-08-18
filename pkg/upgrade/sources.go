@@ -54,10 +54,6 @@ func printIgnoringPackage(log *text.Logger, pkg db.IPackage, newPkgVersion strin
 	left, right := query.GetVersionDiff(pkg.Version(), newPkgVersion)
 
 	pkgName := pkg.Name()
-	log.Warnln(gotext.Get("%s: ignoring package upgrade (%s => %s)",
-		text.Cyan(pkgName),
-		left, right,
-	))
 }
 
 // UpAUR gathers foreign packages and checks if they have new versions.
